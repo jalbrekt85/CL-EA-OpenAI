@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 
 from adapter import Adapter
+import base64
 
 app = Flask(__name__)
 
@@ -21,4 +22,4 @@ def call_adapter():
 
 
 if __name__ == '__main__':
-    app.run(debug=True,  port='3000', threaded=True)
+    app.run(debug=True, host='0.0.0.0', port='3000', threaded=True)
